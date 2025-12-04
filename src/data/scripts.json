@@ -1,7 +1,7 @@
 [
   {
     "id": "trouble_brewing",
-    "title": "暗流涌动 (Trouble Brewing)",
+    "title": "灾祸滋生 (Trouble Brewing)",
     "author": "The Pandemonium Institute",
     "type": "official",
     "description": "新手友好的入门剧本",
@@ -186,7 +186,7 @@
   },
   {
     "id": "bad_moon_rising",
-    "title": "月圆之夜 (Bad Moon Rising)",
+    "title": "黯月初升 (Bad Moon Rising)",
     "author": "The Pandemonium Institute",
     "type": "official",
     "description": "中级难度剧本。月圆之夜，恶魔四处游荡。善良玩家拥有强大的能力，但邪恶阵营也同样危险。",
@@ -395,7 +395,7 @@
   },
   {
     "id": "sects_and_violets",
-    "title": "邪祟之境 (Sects & Violets)",
+    "title": "教派与紫罗兰 (Sects & Violets)",
     "author": "The Pandemonium Institute",
     "type": "official",
     "description": "高级难度剧本。疯狂与混乱并存。信息量巨大但真假难辨，需要高超的逻辑推理能力。",
