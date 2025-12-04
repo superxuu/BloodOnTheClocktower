@@ -1,0 +1,848 @@
+[
+  {
+    "id": "trouble_brewing",
+    "title": "暗流涌动 (Trouble Brewing)",
+    "author": "The Pandemonium Institute",
+    "type": "official",
+    "description": "新手友好的入门剧本。有些事情不对劲。有人死了，但没人知道为什么。每个人都很友好，但每个人都在撒谎。",
+    "roles": [
+      {
+        "id": "washerwoman",
+        "name": "洗衣妇",
+        "team": "townsfolk",
+        "ability": "在游戏开始时，你得知某两名玩家其中之一是某个特定的镇民角色。",
+        "firstNight": true,
+        "otherNight": false
+      },
+      {
+        "id": "librarian",
+        "name": "图书管理员",
+        "team": "townsfolk",
+        "ability": "在游戏开始时，你得知某两名玩家其中之一是某个特定的外来者角色（或者如果你得知'无'，则本局游戏没有外来者）。",
+        "firstNight": true,
+        "otherNight": false
+      },
+      {
+        "id": "investigator",
+        "name": "调查员",
+        "team": "townsfolk",
+        "ability": "在游戏开始时，你得知某两名玩家其中之一是某个特定的爪牙角色。",
+        "firstNight": true,
+        "otherNight": false
+      },
+      {
+        "id": "chef",
+        "name": "厨师",
+        "team": "townsfolk",
+        "ability": "在游戏开始时，你得知有多少对邪恶玩家是邻座。",
+        "firstNight": true,
+        "otherNight": false
+      },
+      {
+        "id": "empath",
+        "name": "共情者",
+        "team": "townsfolk",
+        "ability": "每个夜晚，你得知你的两名活着的邻居中有几个是邪恶的。",
+        "firstNight": true,
+        "otherNight": true
+      },
+      {
+        "id": "fortune_teller",
+        "name": "占卜师",
+        "team": "townsfolk",
+        "ability": "每个夜晚，选择两名玩家：你得知他们中是否包含恶魔。有一名善良玩家会被你的能力误查为恶魔。",
+        "firstNight": true,
+        "otherNight": true
+      },
+      {
+        "id": "undertaker",
+        "name": "掘墓人",
+        "team": "townsfolk",
+        "ability": "每个夜晚*，你得知今天白天死去的玩家的角色。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "monk",
+        "name": "僧侣",
+        "team": "townsfolk",
+        "ability": "每个夜晚*，选择一名玩家（不能选自己）：今晚恶魔无法杀害他。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "ravenkeeper",
+        "name": "守鸦人",
+        "team": "townsfolk",
+        "ability": "如果你在夜晚死去，你会醒来选择一名玩家：你得知他的角色。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "virgin",
+        "name": "圣女",
+        "team": "townsfolk",
+        "ability": "当你在白天第一次被提名时，如果提名者是镇民，该玩家立刻被处决。",
+        "firstNight": false,
+        "otherNight": false
+      },
+      {
+        "id": "slayer",
+        "name": "杀手",
+        "team": "townsfolk",
+        "ability": "每局游戏限一次，在白天，你可以公开选择一名玩家：如果他是恶魔，他死亡。",
+        "firstNight": false,
+        "otherNight": false
+      },
+      {
+        "id": "soldier",
+        "name": "士兵",
+        "team": "townsfolk",
+        "ability": "恶魔无法杀害你。",
+        "firstNight": false,
+        "otherNight": false
+      },
+      {
+        "id": "mayor",
+        "name": "市长",
+        "team": "townsfolk",
+        "ability": "如果白天只有三名玩家存活且没有处决任何人，你的阵营获胜。如果你在夜晚死去，另一名玩家可能会代替你死去。",
+        "firstNight": false,
+        "otherNight": false
+      },
+      {
+        "id": "butler",
+        "name": "管家",
+        "team": "outsider",
+        "ability": "每个夜晚，选择一名其他玩家（你的主人）。明天白天，只有当你的主人投票时，你才能投票。",
+        "firstNight": true,
+        "otherNight": true
+      },
+      {
+        "id": "drunk",
+        "name": "酒鬼",
+        "team": "outsider",
+        "ability": "你不知道你是酒鬼。你以为你是一个镇民角色，但其实你不是。那个镇民角色的能力对你无效。",
+        "firstNight": true,
+        "otherNight": false
+      },
+      {
+        "id": "recluse",
+        "name": "隐士",
+        "team": "outsider",
+        "ability": "你可能会被视为邪恶阵营、爪牙或恶魔，即使你已经死亡。",
+        "firstNight": false,
+        "otherNight": false
+      },
+      {
+        "id": "saint",
+        "name": "圣徒",
+        "team": "outsider",
+        "ability": "如果你死于处决，你的阵营失败。",
+        "firstNight": false,
+        "otherNight": false
+      },
+      {
+        "id": "poisoner",
+        "name": "下毒者",
+        "team": "minion",
+        "ability": "每个夜晚，选择一名玩家：他今晚和明天白天中毒。",
+        "firstNight": true,
+        "otherNight": true
+      },
+      {
+        "id": "spy",
+        "name": "间谍",
+        "team": "minion",
+        "ability": "每个夜晚，你可以查看魔典。你可能会被视为善良阵营或镇民，即使你已经死亡。",
+        "firstNight": true,
+        "otherNight": true
+      },
+      {
+        "id": "scarlet_woman",
+        "name": "红唇女郎",
+        "team": "minion",
+        "ability": "如果此时有5名或更多玩家存活且恶魔死亡，你变成恶魔。（旅行者不计入玩家数量）",
+        "firstNight": false,
+        "otherNight": false
+      },
+      {
+        "id": "baron",
+        "name": "男爵",
+        "team": "minion",
+        "ability": "在游戏开始时，会有额外两名外来者替换掉镇民。",
+        "firstNight": true,
+        "otherNight": false
+      },
+      {
+        "id": "imp",
+        "name": "小恶魔",
+        "team": "demon",
+        "ability": "每个夜晚*，选择一名玩家：他死亡。如果你用此能力自杀，一名爪牙变成小恶魔。",
+        "firstNight": false,
+        "otherNight": true
+      }
+    ]
+  },
+  {
+    "id": "bad_moon_rising",
+    "title": "月圆之夜 (Bad Moon Rising)",
+    "author": "The Pandemonium Institute",
+    "type": "official",
+    "description": "中级难度剧本。月圆之夜，恶魔四处游荡。善良玩家拥有强大的能力，但邪恶阵营也同样危险。",
+    "roles": [
+      {
+        "id": "grandmother",
+        "name": "祖母",
+        "team": "townsfolk",
+        "ability": "在游戏开始时，你得知一名善良玩家和他的角色。如果恶魔杀害他，你也会死亡。",
+        "firstNight": true,
+        "otherNight": false
+      },
+      {
+        "id": "sailor",
+        "name": "水手",
+        "team": "townsfolk",
+        "ability": "每个夜晚，选择一名活着的玩家：你们两人都会醉酒直到黄昏。你不会死亡。",
+        "firstNight": true,
+        "otherNight": true
+      },
+      {
+        "id": "chambermaid",
+        "name": "女仆",
+        "team": "townsfolk",
+        "ability": "每个夜晚，选择两名活着的玩家（不能选自己）：你得知他们中有几人今晚醒来。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "exorcist",
+        "name": "驱魔人",
+        "team": "townsfolk",
+        "ability": "每个夜晚*，选择一名玩家（不同于上个夜晚）：如果他是恶魔，他得知你是谁，然后他今晚不会醒来。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "innkeeper",
+        "name": "旅店老板",
+        "team": "townsfolk",
+        "ability": "每个夜晚*，选择两名玩家：他们今晚不会死亡，但其中一人会醉酒直到黄昏。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "gambler",
+        "name": "赌徒",
+        "team": "townsfolk",
+        "ability": "每个夜晚*，选择一名玩家和猜测一个角色：如果你猜对了，他死亡。如果你猜错了，你死亡。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "gossip",
+        "name": "造谣者",
+        "team": "townsfolk",
+        "ability": "每个白天，你可以公开做一个陈述。今晚，如果它是真的，一名玩家死亡。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "courtier",
+        "name": "侍臣",
+        "team": "townsfolk",
+        "ability": "每局游戏限一次，在夜晚，选择一名角色：如果他在场，他今晚和明天白天会醉酒。",
+        "firstNight": true,
+        "otherNight": true
+      },
+      {
+        "id": "professor",
+        "name": "教授",
+        "team": "townsfolk",
+        "ability": "每局游戏限一次，在夜晚*，选择一名死去的玩家：如果他是镇民，他复活。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "minstrel",
+        "name": "吟游诗人",
+        "team": "townsfolk",
+        "ability": "当一名爪牙死于处决时，所有其他玩家（旅行者除外）会醉酒直到黄昏。",
+        "firstNight": false,
+        "otherNight": false
+      },
+      {
+        "id": "tea_lady",
+        "name": "茶艺师",
+        "team": "townsfolk",
+        "ability": "如果你的两名活着的邻居都是善良的，他们不会死亡。",
+        "firstNight": false,
+        "otherNight": false
+      },
+      {
+        "id": "pacifist",
+        "name": "和平主义者",
+        "team": "townsfolk",
+        "ability": "被处决的善良玩家可能不会死亡。",
+        "firstNight": false,
+        "otherNight": false
+      },
+      {
+        "id": "fool",
+        "name": "愚者",
+        "team": "townsfolk",
+        "ability": "当你在白天第一次死去时，你不会死亡。",
+        "firstNight": false,
+        "otherNight": false
+      },
+      {
+        "id": "tinker",
+        "name": "修补匠",
+        "team": "outsider",
+        "ability": "你可能在任何时候死亡。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "moonchild",
+        "name": "月之子",
+        "team": "outsider",
+        "ability": "当你得知你死去时，公开选择一名活着的玩家。今晚，如果他是善良的，他死亡。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "goon",
+        "name": "暴徒",
+        "team": "outsider",
+        "ability": "每个夜晚，你的第一次投票是你唯一的投票。当你投票时，你会醉酒直到黄昏。",
+        "firstNight": false,
+        "otherNight": false
+      },
+      {
+        "id": "lunatic",
+        "name": "疯子",
+        "team": "outsider",
+        "ability": "你以为你是恶魔，但其实你不是。恶魔知道你是疯子。",
+        "firstNight": true,
+        "otherNight": true
+      },
+      {
+        "id": "godfather",
+        "name": "教父",
+        "team": "minion",
+        "ability": "在游戏开始时，你得知哪些外来者在场。如果有外来者死于处决，所有外来者都会醉酒直到黄昏。",
+        "firstNight": true,
+        "otherNight": true
+      },
+      {
+        "id": "devils_advocate",
+        "name": "恶魔代言人",
+        "team": "minion",
+        "ability": "每个夜晚，选择一名活着的玩家（不同于上个夜晚）：如果他明天被处决，他不会死亡。",
+        "firstNight": true,
+        "otherNight": true
+      },
+      {
+        "id": "assassin",
+        "name": "刺客",
+        "team": "minion",
+        "ability": "每局游戏限一次，在夜晚*，选择一名玩家：他死亡，即使因为任何原因他不会死亡。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "mastermind",
+        "name": "策划者",
+        "team": "minion",
+        "ability": "如果恶魔死于处决（旅行者除外），在接下来的一天一夜后，邪恶阵营获胜。",
+        "firstNight": false,
+        "otherNight": false
+      },
+      {
+        "id": "zombuul",
+        "name": "僵怖",
+        "team": "demon",
+        "ability": "每个夜晚*，如果没有人死去，选择一名玩家：他死亡。当你第一次死去时，你继续存活，但你被视为死亡。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "pukka",
+        "name": "普卡",
+        "team": "demon",
+        "ability": "每个夜晚，选择一名玩家：他中毒。前一个夜晚被你选择的玩家死亡，然后变为健康。",
+        "firstNight": true,
+        "otherNight": true
+      },
+      {
+        "id": "shabaloth",
+        "name": "夏巴洛斯",
+        "team": "demon",
+        "ability": "每个夜晚*，选择两名玩家：他们死亡。一名死去的玩家可能会被你选择；如果是这样，他们会复活。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "po",
+        "name": "波",
+        "team": "demon",
+        "ability": "每个夜晚*，你可以选择一名玩家：他死亡。如果你上个夜晚没有选择任何人，今晚你选择三名玩家。",
+        "firstNight": false,
+        "otherNight": true
+      }
+    ]
+  },
+  {
+    "id": "sects_and_violets",
+    "title": "邪祟之境 (Sects & Violets)",
+    "author": "The Pandemonium Institute",
+    "type": "official",
+    "description": "高级难度剧本。疯狂与混乱并存。信息量巨大但真假难辨，需要高超的逻辑推理能力。",
+    "roles": [
+      {
+        "id": "clockmaker",
+        "name": "钟表匠",
+        "team": "townsfolk",
+        "ability": "在游戏开始时，你得知恶魔与你之间最短的距离（座位数）。",
+        "firstNight": true,
+        "otherNight": false
+      },
+      {
+        "id": "dreamer",
+        "name": "筑梦师",
+        "team": "townsfolk",
+        "ability": "每个夜晚，选择一名玩家（不同于上个夜晚）：你得知一个善良角色和一个邪恶角色，他是其中之一。",
+        "firstNight": true,
+        "otherNight": true
+      },
+      {
+        "id": "snake_charmer",
+        "name": "弄蛇人",
+        "team": "townsfolk",
+        "ability": "每个夜晚，选择一名活着的玩家：如果你选择了恶魔，你们交换角色。",
+        "firstNight": true,
+        "otherNight": true
+      },
+      {
+        "id": "mathematician",
+        "name": "数学家",
+        "team": "townsfolk",
+        "ability": "每个夜晚，你得知有多少玩家的能力今天因为异常原因（中毒/醉酒/能力改变）而失效。",
+        "firstNight": true,
+        "otherNight": true
+      },
+      {
+        "id": "flowergirl",
+        "name": "花匠",
+        "team": "townsfolk",
+        "ability": "每个夜晚*，你得知恶魔是否在今天投过票。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "town_crier",
+        "name": "报童",
+        "team": "townsfolk",
+        "ability": "每个夜晚*，你得知今天是否有爪牙提名。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "oracle",
+        "name": "神谕者",
+        "team": "townsfolk",
+        "ability": "每个夜晚*，你得知有多少死去的玩家是邪恶的。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "savant",
+        "name": "学者",
+        "team": "townsfolk",
+        "ability": "每个白天，你可以访问说书人两次以询问是非问题。",
+        "firstNight": false,
+        "otherNight": false
+      },
+      {
+        "id": "seamstress",
+        "name": "裁缝",
+        "team": "townsfolk",
+        "ability": "每局游戏限一次，在夜晚，选择两名玩家（不能选自己）：你得知他们是否是同一阵营。",
+        "firstNight": true,
+        "otherNight": true
+      },
+      {
+        "id": "philosopher",
+        "name": "哲学家",
+        "team": "townsfolk",
+        "ability": "每局游戏限一次，在夜晚，选择一个善良角色：获得该能力。如果这个角色在场，他会醉酒。",
+        "firstNight": true,
+        "otherNight": true
+      },
+      {
+        "id": "artist",
+        "name": "艺术家",
+        "team": "townsfolk",
+        "ability": "每局游戏限一次，在白天，你可以询问说书人一个是非问题。",
+        "firstNight": false,
+        "otherNight": false
+      },
+      {
+        "id": "juggler",
+        "name": "杂耍艺人",
+        "team": "townsfolk",
+        "ability": "在你的第一天，公开猜测最多五名玩家的角色。今晚，你得知你猜对了几个。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "sage",
+        "name": "贤者",
+        "team": "townsfolk",
+        "ability": "如果恶魔杀害你，你得知是哪两名玩家中的哪一个。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "mutant",
+        "name": "变种人",
+        "team": "outsider",
+        "ability": "你是外来者，但你会被视为爪牙。如果你被发现是外来者，你可能会被处决。",
+        "firstNight": false,
+        "otherNight": false
+      },
+      {
+        "id": "sweetheart",
+        "name": "甜心",
+        "team": "outsider",
+        "ability": "当你死去时，一名玩家会醉酒直到黄昏。",
+        "firstNight": false,
+        "otherNight": false
+      },
+      {
+        "id": "barber",
+        "name": "理发师",
+        "team": "outsider",
+        "ability": "如果你在夜晚死去或被处决，恶魔可能会选择两名玩家（不能选自己）交换角色。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "klutz",
+        "name": "笨蛋",
+        "team": "outsider",
+        "ability": "当你得知你死去时，所有镇民都会醉酒直到黄昏。",
+        "firstNight": false,
+        "otherNight": false
+      },
+      {
+        "id": "evil_twin",
+        "name": "邪恶双胞胎",
+        "team": "minion",
+        "ability": "你和一名对立阵营的玩家互相知道对方的角色和阵营。如果善良的双胞胎被处决，邪恶阵营获胜。",
+        "firstNight": true,
+        "otherNight": false
+      },
+      {
+        "id": "witch",
+        "name": "女巫",
+        "team": "minion",
+        "ability": "每个夜晚，选择一名玩家：如果他明天提名，他死亡。如果只有三名玩家存活，你失去此能力。",
+        "firstNight": true,
+        "otherNight": true
+      },
+      {
+        "id": "cerenovus",
+        "name": "疯言师",
+        "team": "minion",
+        "ability": "每个夜晚，选择一名玩家和一个角色：他明天必须'疯狂'地认为他是那个角色，否则他可能会被处决。",
+        "firstNight": true,
+        "otherNight": true
+      },
+      {
+        "id": "pit_hag",
+        "name": "巫婆",
+        "team": "minion",
+        "ability": "每个夜晚*，选择一名玩家和一个角色：如果该角色不在场，他变成该角色。如果创建了恶魔，死亡会被任意分配。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "fang_gu",
+        "name": "方古",
+        "team": "demon",
+        "ability": "每个夜晚*，选择一名玩家：他死亡。当你选择一名外来者时，你变成他，他变成无能力的方古。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "vigormortis",
+        "name": "活尸",
+        "team": "demon",
+        "ability": "每个夜晚*，选择一名玩家：他死亡。被你杀死的爪牙保留他的能力，且你的一名活着的邻居会中毒。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      {
+        "id": "no_dashii",
+        "name": "无面",
+        "team": "demon",
+        "ability": "每个夜晚*，选择一名玩家：他死亡。你的两名最近的镇民邻居会中毒。",
+        "firstNight": false,
+        "otherNight": true
+      },
+      "type": "official",
+      "description": "高级难度剧本。疯狂与混乱并存。信息量巨大但真假难辨，需要高超的逻辑推理能力。",
+      "roles": [
+        {
+          "id": "clockmaker",
+          "name": "钟表匠",
+          "team": "townsfolk",
+          "ability": "在游戏开始时，你得知恶魔与你之间最短的距离（座位数）。",
+          "firstNight": true,
+          "otherNight": false
+        },
+        {
+          "id": "dreamer",
+          "name": "筑梦师",
+          "team": "townsfolk",
+          "ability": "每个夜晚，选择一名玩家（不同于上个夜晚）：你得知一个善良角色和一个邪恶角色，他是其中之一。",
+          "firstNight": true,
+          "otherNight": true
+        },
+        {
+          "id": "snake_charmer",
+          "name": "弄蛇人",
+          "team": "townsfolk",
+          "ability": "每个夜晚，选择一名活着的玩家：如果你选择了恶魔，你们交换角色。",
+          "firstNight": true,
+          "otherNight": true
+        },
+        {
+          "id": "mathematician",
+          "name": "数学家",
+          "team": "townsfolk",
+          "ability": "每个夜晚，你得知有多少玩家的能力今天因为异常原因（中毒/醉酒/能力改变）而失效。",
+          "firstNight": true,
+          "otherNight": true
+        },
+        {
+          "id": "flowergirl",
+          "name": "花匠",
+          "team": "townsfolk",
+          "ability": "每个夜晚*，你得知恶魔是否在今天投过票。",
+          "firstNight": false,
+          "otherNight": true
+        },
+        {
+          "id": "town_crier",
+          "name": "报童",
+          "team": "townsfolk",
+          "ability": "每个夜晚*，你得知今天是否有爪牙提名。",
+          "firstNight": false,
+          "otherNight": true
+        },
+        {
+          "id": "oracle",
+          "name": "神谕者",
+          "team": "townsfolk",
+          "ability": "每个夜晚*，你得知有多少死去的玩家是邪恶的。",
+          "firstNight": false,
+          "otherNight": true
+        },
+        {
+          "id": "savant",
+          "name": "学者",
+          "team": "townsfolk",
+          "ability": "每个白天，你可以访问说书人两次以询问是非问题。",
+          "firstNight": false,
+          "otherNight": false
+        },
+        {
+          "id": "seamstress",
+          "name": "裁缝",
+          "team": "townsfolk",
+          "ability": "每局游戏限一次，在夜晚，选择两名玩家（不能选自己）：你得知他们是否是同一阵营。",
+          "firstNight": true,
+          "otherNight": true
+        },
+        {
+          "id": "philosopher",
+          "name": "哲学家",
+          "team": "townsfolk",
+          "ability": "每局游戏限一次，在夜晚，选择一个善良角色：获得该能力。如果这个角色在场，他会醉酒。",
+          "firstNight": true,
+          "otherNight": true
+        },
+        {
+          "id": "artist",
+          "name": "艺术家",
+          "team": "townsfolk",
+          "ability": "每局游戏限一次，在白天，你可以询问说书人一个是非问题。",
+          "firstNight": false,
+          "otherNight": false
+        },
+        {
+          "id": "juggler",
+          "name": "杂耍艺人",
+          "team": "townsfolk",
+          "ability": "在你的第一天，公开猜测最多五名玩家的角色。今晚，你得知你猜对了几个。",
+          "firstNight": false,
+          "otherNight": true
+        },
+        {
+          "id": "sage",
+          "name": "贤者",
+          "team": "townsfolk",
+          "ability": "如果恶魔杀害你，你得知是哪两名玩家中的哪一个。",
+          "firstNight": false,
+          "otherNight": true
+        },
+        {
+          "id": "mutant",
+          "name": "变种人",
+          "team": "outsider",
+          "ability": "你是外来者，但你会被视为爪牙。如果你被发现是外来者，你可能会被处决。",
+          "firstNight": false,
+          "otherNight": false
+        },
+        {
+          "id": "sweetheart",
+          "name": "甜心",
+          "team": "outsider",
+          "ability": "当你死去时，一名玩家会醉酒直到黄昏。",
+          "firstNight": false,
+          "otherNight": false
+        },
+        {
+          "id": "barber",
+          "name": "理发师",
+          "team": "outsider",
+          "ability": "如果你在夜晚死去或被处决，恶魔可能会选择两名玩家（不能选自己）交换角色。",
+          "firstNight": false,
+          "otherNight": true
+        },
+        {
+          "id": "klutz",
+          "name": "笨蛋",
+          "team": "outsider",
+          "ability": "当你得知你死去时，所有镇民都会醉酒直到黄昏。",
+          "firstNight": false,
+          "otherNight": false
+        },
+        {
+          "id": "evil_twin",
+          "name": "邪恶双胞胎",
+          "team": "minion",
+          "ability": "你和一名对立阵营的玩家互相知道对方的角色和阵营。如果善良的双胞胎被处决，邪恶阵营获胜。",
+          "firstNight": true,
+          "otherNight": false
+        },
+        {
+          "id": "witch",
+          "name": "女巫",
+          "team": "minion",
+          "ability": "每个夜晚，选择一名玩家：如果他明天提名，他死亡。如果只有三名玩家存活，你失去此能力。",
+          "firstNight": true,
+          "otherNight": true
+        },
+        {
+          "id": "cerenovus",
+          "name": "疯言师",
+          "team": "minion",
+          "ability": "每个夜晚，选择一名玩家和一个角色：他明天必须'疯狂'地认为他是那个角色，否则他可能会被处决。",
+          "firstNight": true,
+          "otherNight": true
+        },
+        {
+          "id": "pit_hag",
+          "name": "巫婆",
+          "team": "minion",
+          "ability": "每个夜晚*，选择一名玩家和一个角色：如果该角色不在场，他变成该角色。如果创建了恶魔，死亡会被任意分配。",
+          "firstNight": false,
+          "otherNight": true
+        },
+        {
+          "id": "fang_gu",
+          "name": "方古",
+          "team": "demon",
+          "ability": "每个夜晚*，选择一名玩家：他死亡。当你选择一名外来者时，你变成他，他变成无能力的方古。",
+          "firstNight": false,
+          "otherNight": true
+        },
+        {
+          "id": "vigormortis",
+          "name": "活尸",
+          "team": "demon",
+          "ability": "每个夜晚*，选择一名玩家：他死亡。被你杀死的爪牙保留他的能力，且你的一名活着的邻居会中毒。",
+          "firstNight": false,
+          "otherNight": true
+        },
+        {
+          "id": "no_dashii",
+          "name": "无面",
+          "team": "demon",
+          "ability": "每个夜晚*，选择一名玩家：他死亡。你的两名最近的镇民邻居会中毒。",
+          "firstNight": false,
+          "otherNight": true
+        },
+        {
+          "id": "vortox",
+          "name": "涡流",
+          "team": "demon",
+          "ability": "每个夜晚*，选择一名玩家：他死亡。镇民的能力会给出错误的信息。每天可能会有额外的处决。",
+          "firstNight": false,
+          "otherNight": true
+        }
+      ]
+    },
+    {
+      "id": "catfishing",
+      "title": "钓鱼执法 (Catfishing)",
+      "author": "Custom Script Community",
+      "type": "custom",
+      "description": "热门自定义剧本。充满欺骗和伪装，大量角色具有误导性信息能力，考验玩家的演技和观察力。适合喜欢高强度博弈的玩家。",
+      "roles": []
+    },
+    {
+      "id": "on_thin_ice",
+      "title": "如履薄冰 (On Thin Ice)",
+      "author": "Custom Script Community",
+      "type": "custom",
+      "description": "紧张刺激的自定义剧本。每个决定都可能导致灾难性后果，玩家必须小心翼翼地平衡风险与收益。",
+      "roles": []
+    },
+    {
+      "id": "laissez_un_faire",
+      "title": "自由放任 (Laissez Un Faire)",
+      "author": "Custom Script Community",
+      "type": "custom",
+      "description": "经济主题剧本。玩家需要管理资源和交易，在经济博弈中寻找真相。独特的机制带来全新体验。",
+      "roles": []
+    },
+    {
+      "id": "deadly_penance_day",
+      "title": "赎罪之日 (Deadly Penance Day)",
+      "author": "Custom Script Community",
+      "type": "custom",
+      "description": "强调白天互动和投票机制的剧本。处决和提名系统被重新设计，白天的讨论变得更加关键。",
+      "roles": []
+    },
+    {
+      "id": "race_to_the_bottom",
+      "title": "竞相沉沦 (Race to the Bottom)",
+      "author": "Custom Script Community",
+      "type": "custom",
+      "description": "反转传统玩法的创新剧本。某些情况下，死亡反而是优势，玩家需要重新思考策略。",
+      "roles": []
+    },
+    {
+      "id": "experimental",
+      "title": "实验场 (Experimental)",
+      "author": "The Pandemonium Institute",
+      "type": "custom",
+      "description": "官方实验性角色合集。包含各种测试中的新角色和机制，适合喜欢尝鲜的玩家。",
+      "roles": []
+    }
+  ]
