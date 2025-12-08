@@ -3,6 +3,7 @@ import ScriptViewer from './components/ScriptViewer';
 import SeatingChart from './components/SeatingChart';
 import GameLog from './components/GameLog';
 import Layout from './components/Layout';
+import ConfirmDialog from './components/ConfirmDialog';
 
 function App() {
   const [activeTab, setActiveTab] = useState('script');
@@ -34,6 +35,9 @@ function App() {
   });
   const [showDistributionEditor, setShowDistributionEditor] = useState(false);
   const [editingDistribution, setEditingDistribution] = useState(null);
+
+  // Confirm dialog state
+  const [confirmDialog, setConfirmDialog] = useState({ isOpen: false, message: '', onConfirm: null });
 
   // Save state changes
   useEffect(() => {
@@ -90,28 +94,38 @@ function App() {
 
   // Reset Game (Full Reset)
   const resetGame = () => {
-    if (window.confirm('确定要结束当前游戏并重置所有内容吗？')) {
-      setPlayers([
-        { id: 1, name: '玩家 1', isDead: false, role: null },
-        { id: 2, name: '玩家 2', isDead: false, role: null },
-        { id: 3, name: '玩家 3', isDead: false, role: null },
-        { id: 4, name: '玩家 4', isDead: false, role: null },
-        { id: 5, name: '玩家 5', isDead: false, role: null },
-      ]);
-      setLogs([]);
-      setDayCount(1);
-      setIsNight(true);
-    }
+    setConfirmDialog({
+      isOpen: true,
+      message: '确定要结束当前游戏并重置所有内容吗？',
+      onConfirm: () => {
+        setPlayers([
+          { id: 1, name: '玩家 1', isDead: false, role: null },
+          { id: 2, name: '玩家 2', isDead: false, role: null },
+          { id: 3, name: '玩家 3', isDead: false, role: null },
+          { id: 4, name: '玩家 4', isDead: false, role: null },
+          { id: 5, name: '玩家 5', isDead: false, role: null },
+        ]);
+        setLogs([]);
+        setDayCount(1);
+        setIsNight(true);
+        setConfirmDialog({ isOpen: false, message: '', onConfirm: null });
+      }
+    });
   };
 
   // Next Game (Keep players, reset status)
   const nextGame = () => {
-    if (window.confirm('确定要开始下一局吗？这将重置玩家状态和记录，但保留玩家名单。')) {
-      setPlayers(players.map(p => ({ ...p, isDead: false, role: null })));
-      setLogs([]);
-      setDayCount(1);
-      setIsNight(true);
-    }
+    setConfirmDialog({
+      isOpen: true,
+      message: '确定要开始下一局吗？这将重置玩家状态和记录，但保留玩家名单。',
+      onConfirm: () => {
+        setPlayers(players.map(p => ({ ...p, isDead: false, role: null })));
+        setLogs([]);
+        setDayCount(1);
+        setIsNight(true);
+        setConfirmDialog({ isOpen: false, message: '', onConfirm: null });
+      }
+    });
   };
 
   const renderContent = () => {
@@ -138,6 +152,7 @@ function App() {
             isNight={isNight}
             setIsNight={setIsNight}
             addLog={addLog}
+            showConfirm={(message, onConfirm) => setConfirmDialog({ isOpen: true, message, onConfirm: () => { onConfirm(); setConfirmDialog({ isOpen: false, message: '', onConfirm: null }); } })}
           />
         );
       default:
@@ -363,6 +378,14 @@ function App() {
           </div>
         </div>
       )}
+
+      {/* Custom Confirm Dialog */}
+      <ConfirmDialog
+        isOpen={confirmDialog.isOpen}
+        message={confirmDialog.message}
+        onConfirm={confirmDialog.onConfirm}
+        onCancel={() => setConfirmDialog({ isOpen: false, message: '', onConfirm: null })}
+      />
     </>
   );
 }

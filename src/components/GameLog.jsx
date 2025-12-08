@@ -13,7 +13,7 @@ const getTheme = (isNight) => {
     };
 };
 
-const GameLog = ({ logs, setLogs, dayCount, setDayCount, isNight, setIsNight, addLog }) => {
+const GameLog = ({ logs, setLogs, dayCount, setDayCount, isNight, setIsNight, addLog, showConfirm }) => {
     const [newLog, setNewLog] = useState('');
     const [editingId, setEditingId] = useState(null);
     const [insertingId, setInsertingId] = useState(null);
@@ -39,7 +39,11 @@ const GameLog = ({ logs, setLogs, dayCount, setDayCount, isNight, setIsNight, ad
     };
 
     const deleteLog = (id) => {
-        if (window.confirm('确定要删除这条记录吗？')) {
+        if (showConfirm) {
+            showConfirm('确定要删除这条记录吗？', () => {
+                setLogs(logs.filter((log) => log.id !== id));
+            });
+        } else {
             setLogs(logs.filter((log) => log.id !== id));
         }
     };

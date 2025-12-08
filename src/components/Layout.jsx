@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Users, ScrollText, Settings } from 'lucide-react';
+import { BookOpen, Users, ScrollText } from 'lucide-react';
 
 const Layout = ({ children, activeTab, onTabChange, headerRight }) => {
     return (
@@ -9,9 +9,6 @@ const Layout = ({ children, activeTab, onTabChange, headerRight }) => {
                 <h1 style={{ fontSize: '1.25rem', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>Blood on the Clocktower</h1>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                     {headerRight}
-                    <button className="btn-icon">
-                        <Settings size={20} />
-                    </button>
                 </div>
             </header>
 
